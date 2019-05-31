@@ -25,9 +25,20 @@ def intent_received(hermes, intent_message):
 			if (name =='William'):
 				janniv = 2
 				manniv = 6
+				name = 'Williame'
 			if (name =='Marie'):
 				janniv = 3
 				manniv = 6
+				
+			now = datetime.datetime.now()
+			year = now.year
+			today = datetime.date.today()
+			anniv = datetime.date(year+1, manniv, janniv) 
+			diff = anniv - today
+
+			liste_reponses = ["Il reste "+str(diff.days%365-1)+" jours avant l'anniversaire de "]
+			sentence = liste_reponses[random.randint(0,len(liste_reponses)-1)]
+			sentence += name
 			
 				
 	
@@ -35,21 +46,15 @@ def intent_received(hermes, intent_message):
 		else:
 			janniv = 1
 			manniv = 11
-
-
-		now = datetime.datetime.now()
-		year = now.year
-		today = datetime.date.today()
-		anniv = datetime.date(year+1, manniv, janniv) 
-		diff = anniv - today
-
-		liste_reponses = ["Il reste "+str(diff.days%365-1)+" jours avant votre anniversaire"]			    
-
-		sentence = liste_reponses[random.randint(0,len(liste_reponses)-1)]		
-	
 			
-	
-	
+			now = datetime.datetime.now()
+			year = now.year
+			today = datetime.date.today()
+			anniv = datetime.date(year+1, manniv, janniv) 
+			diff = anniv - today
+
+			liste_reponses = ["Il reste "+str(diff.days%365-1)+" jours avant votre anniversaire "]
+			sentence = liste_reponses[random.randint(0,len(liste_reponses)-1)]
 
 
 
