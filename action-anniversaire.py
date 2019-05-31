@@ -20,7 +20,8 @@ def intent_received(hermes, intent_message):
 	
 	if intent_message.intent.intent_name == 'xrobquin:question_anniversaire':
 		
-		if len(intent_message.slots.Name)==0:
+		if len(intent_message.slots.Name)==1:
+			name = intent_message.slots.Name.first().value	
 			if (name =='William'):
 				janniv = 2
 				manniv = 6
