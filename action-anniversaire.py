@@ -19,8 +19,8 @@ def intent_received(hermes, intent_message):
 	print ()
 	
 	
-	janniv = 3
-	manniv = 6
+	janniv = 1
+	manniv = 11
 
 
 	now = datetime.datetime.now()
