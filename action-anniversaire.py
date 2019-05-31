@@ -29,6 +29,15 @@ def intent_received(hermes, intent_message):
 			if (name =='Marie'):
 				janniv = 3
 				manniv = 6
+			if (name =='Philippe'):
+				janniv = 3
+				manniv = 6
+			if (name =='Pascale'):
+				janniv = 7
+				manniv = 3
+			if (name =='Vincent'):
+				janniv = 12
+				manniv = 12
 				
 			now = datetime.datetime.now()
 			year = now.year
